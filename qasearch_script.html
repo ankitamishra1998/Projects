@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title> Hello </title>
+    <link rel="stylesheet" href="qasearch_event.css">
+</head>
+
+<body>
+<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+    
+<script>
+    $(document).ready(function() {
+    $("#logo").hover(function(){
+         $("#wrap").append('<audio controls id="rickSpeak" class="rickSpeak"> <source src='+rickLiners[Math.floor(Math.random()*rickLiners.length)]+' ></audio>')
+        
+    });
+});
+    
+    var rickLiners = ["https://sound.peal.io/ps/audios/000/000/532/original/whatever.wav?1469743960",
+                     "https://sound.peal.io/ps/audios/000/000/544/original/AIDS!.wav?1469743965",
+                     "https://sound.peal.io/ps/audios/000/000/537/original/woo_vu_luvub_dub_dub.wav?1469744420",
+                     "https://sound.peal.io/ps/audios/000/000/535/original/That's_retarded.wav?1469744207",
+                     "https://sound.peal.io/ps/audios/000/000/533/original/Riggity.wav?1469744359",
+                     "https://sound.peal.io/ps/audios/000/000/545/original/Burger_Time!.wav?1469744228",
+                     "https://sound.peal.io/ps/audios/000/000/539/original/And_that's_the_way_news_goes.wav?1469744336",
+                     "https://sound.peal.io/ps/audios/000/000/540/original/hit_the_sack_jack.wav?1469744187",
+                     "https://sound.peal.io/ps/audios/000/000/541/original/And_that's_why_I_always_say.wav?1469744358",
+                     "https://sound.peal.io/ps/audios/000/000/978/original/youtube.mp3?1469743945",
+                     "https://sound.peal.io/ps/audios/000/000/736/original/turn_into_a_car.wav?1469744195",
+                     "https://sound.peal.io/ps/audios/000/000/737/original/along.mp3?1469744041",
+                     "https://sound.peal.io/ps/audios/000/001/087/original/youtube.mp3?1469744201",
+                     "https://sound.peal.io/ps/audios/000/000/740/original/concentrate.mp3?1469744388",
+                     "https://sound.peal.io/ps/audios/000/001/053/original/youtube.mp3?1469744254",
+                     "https://sound.peal.io/ps/audios/000/000/567/original/Gazorpazorpfield.wav?1469744390",
+                     "https://sound.peal.io/ps/audios/000/000/847/original/let_me_out_.wav?1469744122",
+                     "https://sound.peal.io/ps/audios/000/001/266/original/owee_%281%29.wav?1480363200",
+                     "https://sound.peal.io/ps/audios/000/000/979/original/youtube.mp3?1469744415",
+                     "https://sound.peal.io/ps/audios/000/000/542/original/rubber_baby_baby_bunkers.wav?1469744215",
+                     "https://sound.peal.io/ps/audios/000/000/848/original/rick.wav?1469743991",
+                     "https://sound.peal.io/ps/audios/000/000/548/original/Hi_I'm_mr_meeseeks_look_at_me.wav?1469744301"]
+                    
+    
+</script>
+<img name="logo" id="logo" width=30 height=30  
+    src="/Users/Umesh/Desktop/Games/fanx coop/ricksleepy.png" alt="sleepy rick"/>
+<div id="wrap">&nbsp;</div>
+    
+<form id="searchForm" autocomplete="off">
+	<input id="searchField" list="searchData" name="qasearch" class="searchMockup" placeholder="Hi qa, type your search here"/>
+    <datalist id="searchData">
+        <option id="test1">test data</option>
+    </datalist>
+</form>
+    
+<div id="eventRows" class="container">
+    <div class="row">
+        <div id="Event_1_Id" class="col-2"><p id="event_0_Id" class="eventId" style="margin: 10px;">10</p></div>
+        <div id="Event_1_Name" class="col-8"><p id="event_0_Name" class="eventName" style="margin: 10px;"></div>
+        <div id="Event_1_Date" class="col-2"><p id="event_0_Date" class="eventDate" style="margin: 10px;"></div>
+        <div id="Event_1_tickets" class="col-2"><button id="ticket_0_Btn" class="ticketBtn" type="button" class="button" data-toggle="modal" data-target="#myModal">Tickets</button></div>
+    </div>
+    <div class="row">
+        <div id="Event_2_Id" class="col-2"><p id="event_1_Id" class="eventId" style="margin: 10px;"></p></div>
+        <div id="Event_2_Name" class="col-8"><p id="event_1_Name" class="eventName" style="margin: 10px;"></div>
+        <div id="Event_2_Date" class="col-2"><p id="event_1_Date" class="eventDate" style="margin: 10px;"></div>
+        <div id="Event_2_tickets" class="col-2"><button id="ticket_1_Btn" class="ticketBtn" type="button" class="button" data-toggle="modal" data-target="#myModal">Tickets</button></div>
+    </div>
+    <div class="row">
+        <div id="Event_3_Id" class="col-2"><p id="event_2_Id" class="eventId" style="margin: 10px;"></p></div>
+        <div id="Event_3_Name" class="col-8"><p id="event_2_Name" class="eventName" style="margin: 10px;"></div>
+        <div id="Event_3_Date" class="col-2"><p id="event_2_Date" class="eventDate" style="margin: 10px;"></div>
+        <div id="Event_3_tickets" class="col-2"><button id="ticket_2_Btn" class="ticketBtn" type="button" class="button" data-toggle="modal" data-target="#myModal">Tickets</button></div>
+    </div>
+    <div class="row">
+        <div id="Event_4_Id" class="col-2"><p id="event_3_Id" class="eventId" style="margin: 10px;"></p></div>
+        <div id="Event_4_Name" class="col-8"><p id="event_3_Name" class="eventName" style="margin: 10px;"></div>
+        <div id="Event_4_Date" class="col-2"><p id="event_3_Date" class="eventDate" style="margin: 10px;"></div>
+        <div id="Event_4_tickets" class="col-2"><button id="ticket_3_Btn" class="ticketBtn" type="button" class="button" data-toggle="modal" data-target="#myModal">Tickets</button></div>
+    </div>
+    <div class="row">
+        <div id="Event_5_Id" class="col-2"><p id="event_4_Id" class="eventId" style="margin: 10px;"></p></div>
+        <div id="Event_5_Name" class="col-8"><p id="event_4_Name" class="eventName" style="margin: 10px;"></div>
+        <div id="Event_5_Date" class="col-2"><p id="event_4_Date" class="eventDate" style="margin: 10px;"></div>
+        <div id="Event_5_tickets" class="col-2"><button id="ticket_4_Btn" class="ticketBtn" type="button" class="button" data-toggle="modal" data-target="#myModal">Tickets</button></div>
+    </div>
+    <div class="row">
+        <div id="Event_6_Id" class="col-2"><p id="event_5_Id" class="eventId" style="margin: 10px;"></p></div>
+        <div id="Event_6_Name" class="col-8"><p id="event_5_Name" class="eventName" style="margin: 10px;"></div>
+        <div id="Event_6_Date" class="col-2"><p id="event_5_Date" class="eventDate" style="margin: 10px;"></div>
+        <div id="Event_6_tickets" class="col-2"><button id="ticket_5_Btn" class="ticketBtn" type="button" class="button" data-toggle="modal" data-target="#myModal">Tickets</button></div>
+    </div>
+    <div class="row">
+        <div id="Event_7_Id" class="col-2"><p id="event_6_Id" class="eventId" style="margin: 10px;"></p></div>
+        <div id="Event_7_Name" class="col-8"><p id="event_6_Name" class="eventName" style="margin: 10px;"></div>
+        <div id="Event_7_Date" class="col-2"><p id="event_6_Date" class="eventDate" style="margin: 10px;"></div>
+        <div id="Event_7_tickets" class="col-2"><button id="ticket_6_Btn" class="ticketBtn" type="button" class="button" data-toggle="modal" data-target="#myModal">Tickets</button></div>
+    </div>
+    <div class="row">
+        <div id="Event_8_Id" class="col-2"><p id="event_7_Id" class="eventId" style="margin: 10px;"></p></div>
+        <div id="Event_8_Name" class="col-8"><p id="event_7_Name" class="eventName" style="margin: 10px;"></div>
+        <div id="Event_8_Date" class="col-2"><p id="event_7_Date" class="eventDate" style="margin: 10px;"></div>
+        <div id="Event_8_tickets" class="col-2"><button id="ticket_7_Btn" class="ticketBtn" type="button" class="button" data-toggle="modal" data-target="#myModal">Tickets</button></div>
+    </div>
+    <div class="row">
+        <div id="Event_9_Id" class="col-2"><p id="event_8_Id" class="eventId" style="margin: 10px;"></p></div>
+        <div id="Event_9_Name" class="col-8"><p id="event_8_Name" class="eventName" style="margin: 10px;"></div>
+        <div id="Event_9_Date" class="col-2"><p id="event_8_Date" class="eventDate" style="margin: 10px;"></div>
+        <div id="Event_9_tickets" class="col-2"><button id="ticket_8_Btn" class="ticketBtn" type="button" class="button" data-toggle="modal" data-target="#myModal">Tickets</button></div>
+    </div>
+    <div class="row">
+        <div id="Event_10_Id" class="col-2"><p id="event_9_Id" class="eventId" style="margin: 10px;"></p></div>
+        <div id="Event_10_Name" class="col-8"><p id="event_9_Name" class="eventName" style="margin: 10px;"></div>
+        <div id="Event_10_Date" class="col-2"><p id="event_9_Date" class="eventDate" style="margin: 10px;"></div>
+        <div id="Event_10_tickets" class="col-2"><button id="ticket_9_Btn" class="ticketBtn" type="button" class="button" data-toggle="modal" data-target="#myModal">Tickets</button></div>
+    </div>
+</div>
+    
+<div id="ticket" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="ticketDetails"></p>
+    </div>
+
+</div>
+
+<div class="pagination">
+  <a href="#">&laquo;</a>
+  <a href="#" id="page1">1</a>
+  <a href="#" id="page2">2</a>
+  <a href="#" id="page3">3</a>
+  <a href="#" id="page4">4</a>
+  <a href="#" id="page5">5</a>
+  <a href="#" id="page6">6</a>
+  <a href="#">&raquo;</a>
+</div>
+
+<script>
+var modal = document.getElementById("ticket");
+
+var span = document.getElementsByClassName("close")[0];
+
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if(event.target == modal){
+        modal.style.display = "none";
+    }
+}
+
+
+//$(document).ready(function(){
+//    for(var i=0;i<=10;i++){
+//    $("#eventRows").append('<div class="row"><div id="Event_'+i+'_Id" class="col-2"><p id="event_'+i+'_Id" class="eventId" style="margin: 10px;"></p></div><div id="Event_'+i+'_Name" class="col-8"><p id="event_'+i+'_Name" class="eventName" style="margin: 10px;"></div><div id="Event_'+i+'_tickets" class="col-2"><button id="ticket_'+i+'_Btn" class="ticketBtn" type="button" class="button" data-toggle="modal" data-target="#myModal">Tickets</button></div></div>'
+//        
+//        )
+//    };
+//})
+    
+var searchField = document.getElementById("searchField");
+    
+searchField.addEventListener("input", function(event) {
+    console.log("new autocomplete:");
+    var query = searchField.value;
+    getAutocomplete(query)
+})
+
+searchField.addEventListener("keydown",function(event){
+    console.log(event.keyCode)
+    if(event.keyCode==13){
+        event.preventDefault()
+        getEvents(1)
+//        window.location.href="qasearch_script.html";
+    }
+})
+    
+$(document).ready(function(){
+    $("#page1").click(function(){
+        getEvents(1);
+    })
+    $("#page2").click(function(){
+        getEvents(2);
+    })
+    $("#page3").click(function(){
+        getEvents(3);
+    })
+    $("#page4").click(function(){
+        getEvents(4);
+    })
+    $("#page5").click(function(){
+        getEvents(5);
+    })
+    $("#page6").click(function(){
+        getEvents(6);
+    })
+})
+    
+function actionTickets() {
+    var responseObject = JSON.parse(this.responseText);
+    $("#ticketDetails").append(responseObject.tickets[0].notes); 
+}    
+
+    
+function actionSearch () {
+    var responseObject = JSON.parse(this.responseText);
+    for(var i=0;i<10;i++){
+    function addEvents(eventNumber){
+        document.getElementById("event_"+i+"_Name").innerHTML="";
+        if(responseObject.chronological.results[i]!==undefined){
+            var performerName = responseObject.chronological.results[i].name;
+            $("#event_"+i+"_Name").append(performerName);
+        };
+        document.getElementById("event_"+i+"_Id").innerHTML="";
+        if(responseObject.chronological.results[i]!==undefined){
+            var performerId = responseObject.chronological.results[i].id;
+//            document.getElementById("#event_"+i+"_Id").innerHTML=performerId;
+            $("#event_"+i+"_Id").append(performerId);
+        };
+        document.getElementById("event_"+i+"_Date").innerHTML="";
+        if(responseObject.chronological.results[i]!==undefined){
+            var performerDate =  responseObject.chronological.results[i].local_date;
+            performerDate= performerDate.slice(8,10)+month(performerDate)+ performerDate.slice(0,4);
+            $("#event_"+i+"_Date").append(performerDate);
+        };
+        
+    }
+    addEvents(i)
+    
+    };
+     
+    console.log(responseObject.chronological.results[1].local_date);
+}
+    
+for(var i=0;i<10;i++){
+    var ticketButton = document.getElementById("ticket_"+i+"_Btn");
+    ticketButton.onclick = function() {
+        for(var i=0;i<10;i++){
+            modal.style.display = "flex";
+            getTickets($("#event_"+i+"_Id").text());
+        }
+    }
+}
+    
+function month(dateString) {
+    var months=[" Jan "," Feb "," Mar "," Apr "," May "," Jun "," July "," Aug "," Sept "," Oct "," Nov "," Dec "];
+    var monthNumber= dateString.slice(6,7);
+    if(monthNumber==11){
+        dateString=months[10];
+    }
+    else if(monthNumber==12){
+        dateString=months[11];
+    }
+    else{
+        dateString=months[monthNumber];
+    }
+    return dateString;
+}
+
+function actionAutocomplete () {
+    var responseObject = JSON.parse(this.responseText);
+    var performerResponse = responseObject.performers;
+    for(var i = 0; i<performerResponse.length; i++){
+        console.log(performerResponse[i].name + ": #" + performerResponse[i].id );
+        function add(){
+        var performerName = performerResponse[i].name;
+        var performerId = performerResponse[i].id;
+        var newOption = "<option id="+performerId+">"+performerName+ "</option>"
+        if ($("#searchData option[id="+performerId+"]").length == 0){
+        $("#searchData").append(newOption);}
+        }
+        add()
+    }   
+}
+
+function getAutocomplete(query) {
+	var oReq = new XMLHttpRequest();
+	oReq.addEventListener("load", actionAutocomplete);
+	oReq.open("GET", "https://uat-marketplace-api.fanxchange.com/v2/events/autocomplete?q=" + query);
+	oReq.send();
+};
+    
+
+function getEvents(pageNumber){
+    var oReq = new XMLHttpRequest();
+    oReq.addEventListener("load", actionSearch);
+    oReq.open("GET", "https://uat-marketplace-api.fanxchange.com/v2/events/search?q="+searchField.value+"&page="+pageNumber+"&per_page=10");
+    oReq.send();
+};
+
+    
+function getTickets(id){
+    var oReq = new XMLHttpRequest();
+    oReq.addEventListener("load", actionTickets);
+    oReq.open("GET", "https://uat-marketplace-api.fanxchange.com/v2/events/"+id+"/tickets");
+    oReq.send();
+};
+
+
+</script>
+    
+</body>
+</html>
